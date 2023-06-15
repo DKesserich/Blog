@@ -1,4 +1,3 @@
-remote_theme: pages-themes/minimal@v0.2.0
+theme: minima
 title: "David's GameDev Bloggery"
 description: "A blog for various gamedev related thoughts/musings/tutorials"
-layout: default
