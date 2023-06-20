@@ -8,7 +8,7 @@ In short this is going to be a ‘Why I like Behavior Tree (and you should like 
 but I’m also going to talk about game AI programming in general (at least my understanding of it. I am by no stretch an expert in game AI), 
 and how I think about Behavior Trees and some of what I feel like the theory of them is, using an AI character that I’m currently working on as an example.
 (If you've watched [Paolo Souza's excellent Behavior Tree Tutorial](https://www.youtube.com/watch?v=iY1jnFvHgbE) on Youtube, he covers a lot of the same ground as this post,
-but glosses over some details like [interface usage](#a-note-on-chain-of-command-and-blueprint-interfaces), so maybe skip to that section here because it's going to come up
+but glosses over some details like [interface usage](#a-note-on-chain-of-command-and-blueprint-interfaces), so maybe skip to the end here because it's going to come up
 in future posts)
 
 So, to start with…
@@ -118,8 +118,9 @@ The first thing about Behavior Trees is that we need to sort of change how we th
 the states of the guy are a pretty standard finite state machine, with three rigid, discrete states. A Behavior Tree is still pretty much a finite state machine, 
 but the states can be a little bit softer (you can make them pretty rigid, but doing so brings some drawbacks), and it also has to be organized by priority. 
 In code, you can put the states in whatever order you want, in Behavior Tree you need to know what your AI wants. I find it useful to think of it in terms of a "hierarchy of needs."
-So instead of just thinking about “what are our states and what changes our current state,” we have to think about “what is the state that our guy wants to be in, 
-and what do they fall into when they can’t be in that state.” And then we organize the tree from left to right in the order of where we want to fall down or up the tree.
+
+So instead of just thinking about “what are our states and what changes our current state?” we have to think about “what is the state that our guy **wants** to be in, 
+and what do they fall into when they can’t be in that state?” And then we organize the tree from left to right in the order of where we want to fall down or up the tree.
 
 ### The Blackboard
 
@@ -142,7 +143,7 @@ so their third highest priority is getting close enough to whatever they saw to 
 
 So here’s a view of the three state guy as a Behavior Tree:
 
-![Screenshot of a basic Behavior Tree](https://github.com/DKesserich/Blog/blob/main/_images/ThreeStateBT.PNG)
+![Screenshot of a basic Behavior Tree](/_images/ThreeStateBT.PNG)
 
 So we can clearly see our three states: Patrol, Attack, Pursue. These nodes are ‘Composite’ nodes. ‘Composites’ do pretty much what the name suggests: 
 they let you composite other nodes, be they other composites or tasks, into an overall task, or Behavior. The ‘Main’ node is a ‘Selector’ type, 
