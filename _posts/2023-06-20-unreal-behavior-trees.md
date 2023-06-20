@@ -143,7 +143,7 @@ so their third highest priority is getting close enough to whatever they saw to 
 
 So here’s a view of the three state guy as a Behavior Tree:
 
-![Screenshot of a basic Behavior Tree](/_images/ThreeStateBT.PNG)
+![Screenshot of a basic Behavior Tree](/images/ThreeStateBT.PNG)
 
 So we can clearly see our three states: Patrol, Attack, Pursue. These nodes are ‘Composite’ nodes. ‘Composites’ do pretty much what the name suggests: 
 they let you composite other nodes, be they other composites or tasks, into an overall task, or Behavior. The ‘Main’ node is a ‘Selector’ type, 
