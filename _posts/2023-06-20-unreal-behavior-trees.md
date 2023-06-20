@@ -8,7 +8,7 @@ In short this is going to be a ‘Why I like Behavior Tree (and you should like 
 but I’m also going to talk about game AI programming in general (at least my understanding of it. I am by no stretch an expert in game AI), 
 and how I think about Behavior Trees and some of what I feel like the theory of them is, using an AI character that I’m currently working on as an example.
 (If you've watched [Paolo Souza's excellent Behavior Tree Tutorial](https://www.youtube.com/watch?v=iY1jnFvHgbE) on Youtube, he covers a lot of the same ground as this post,
-but glosses over some details like interface usage, so maybe skip to that section here because it's going to come up
+but glosses over some details like [interface usage](#a-note-on-chain-of-command-and-blueprint-interfaces), so maybe skip to that section here because it's going to come up
 in future posts)
 
 So, to start with…
