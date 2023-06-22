@@ -42,7 +42,7 @@ You should end up with something that looks like this:
 
 <img src = "https://github.com/DKesserich/Blog/blob/main/images/Get_Random_Loc_BP.png?raw=true" alt = "A screenshot of the GetRandomLocation BP logic">
 
-Now that that’s set up, time to go back to our Behavior Tree and add a Look Around task (I say task, but this really more of a sub-behavior) to the Patrol behavior. 
+Now that that’s set up, time to go back to our Behavior Tree and add a Look Around task (I say task, but this is really more of a sub-behavior) to the Patrol behavior. 
 
 I find that the easiest way to set up a timed task is with the Simple Parallel Composite node. There is a Time Limit decorator, but that returns a Fail when the time limit expires, 
 which can cause a fail all the way back up the tree, and we don’t want that. 
