@@ -48,7 +48,7 @@ I find that the easiest way to set up a timed task is with the Simple Parallel C
 which can cause a fail all the way back up the tree, and we don’t want that. 
 
 When you add a Simple Parallel node, you’ll see that the bottom of the node is separated into a purple section and a grey section, 
-where all other composite nodes just have a grey section. Whatever task or composite is plugged into the purple section is what determines when the Simple Parallel completes, 
+where all other composite nodes just have a grey section. Whatever task or composite is plugged into the purple section (Edit: Turns out composites can't be plugged into the purple section, only tasks. But you CAN use Run Behavior tasks. See Part 4 of this series for more on them) is what determines when the Simple Parallel completes, 
 and whether its completion is a success or a failure. So we just want to plug a Wait task into the purple section. Into the grey section we want to plug a Sequence composite, 
 and from there we want our Get Random Location task, a Rotate To Face BB Entry task, and another wait task. 
 For the Get Random Location set the Found Location key to the Look At Location Blackboard Entry and the Origin to SelfActor, and the radius to a meter or so. 
