@@ -96,9 +96,9 @@ both of them set to abort self. This is how it should look:
 
 Back in our main Behavior Tree we now want to add the Run Behavior Dynamic task. You’ll notice that the settings are a little bit different than the Run Behavior task.
 Where in Run Behavior it just had the Behavior Asset, here it has an Injection Tag and a Default Behavior Asset. Default Behavior Asset is exactly what it sounds like. 
-It’s the behavior tree we want to run by default. In this case we want to set that to BT_Combat_ShortRangeMelee. Injection Tag is the important bit, 
-because it is this tag that is used in Blueprint or code to set a different BT asset during gameplay. If you click the Edit button here you can pick any existing gameplay tags, 
-or create a new gameplay tag for this task. The thing to keep in mind is that every Run Behavior Dynamic task in the Behavior Tree, 
+It’s the behavior tree we want to run by default. In this case we want to set that to BT_Combat_ShortRangeMelee. 
+
+Injection Tag is the important bit, because it is this tag that is used in Blueprint or code to set a different BT asset during gameplay. If you click the Edit button here you can pick any existing gameplay tags, or create a new gameplay tag for this task. The thing to keep in mind is that every Run Behavior Dynamic task in the Behavior Tree, 
 and any in any Behavior Trees being called from your main Behavior Tree, should have a unique tag. I.E. if this one we just added were tagged Combat_Behavior (which it is), 
 and if we wanted to be able to dynamically swap BT_GenericAttack in the BT_Combat_ShortRangeMelee tree with something else, we wouldn’t want that task to also be tagged Combat_Behavior.
 
